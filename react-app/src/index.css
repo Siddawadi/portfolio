@@ -1,3 +1,8 @@
 #logo { display: none !important; }
 #watermark { display: none !important; }
 canvas + div { display: none !important; }
+
+
+html {
+  scroll-behavior: smooth;
+}
