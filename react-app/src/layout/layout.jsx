@@ -8,27 +8,38 @@ import { Projects } from '../pages/projects'
 import { SplineScene } from '../components/common/SplineScene'
 import { Education } from '../pages/education'
 import { Projectsbuilt } from '../pages/built'
+import { Tryweb } from '../pages/try'
 
 export const Layout = () => {
   return (
-    <div className='flex flex-col w-full min-h-screen text-sm font-medium mb-2 bg-gray-900 text-purple-200 uppercase tracking-widest'>
-      <Header />
+    <div className="relative flex flex-col  w-full min-h-screen text-sm font-light
+     text-sm mb-2 bg-whtie
+     text-[#f5f0e8]  tracking-widest overflow-hidden">
 
-      <div id="home" className='flex flex-1 w-full min-h-screen'>
-        <div className='flex flex-col justify-center w-1/2 px-10'>
-          <Introduction />
+      {/* Topographic Background Layer */}
+     
+     
+
+      {/* Main Content */}
+      <div className="relative z-50">
+        <Header />
+
+        <div id="home" className="flex flex-1 w-full min-h-screen">
+          <div className="flex flex-col justify-start  w-full px-10">
+            <Introduction />
+          </div>
         </div>
-      </div>
 
-      <div className='px-10' >
-        <div id="project"><Projects /></div>
-        <div id="about"><Aboutme /></div>
-        <div id="education"><Education /></div>
-        <div id="skills"><Skills /></div>
-        <div id="contact"><Projectsbuilt /></div>
-      </div>
+        <div className="px-10">
+          <div id="about"><Aboutme /></div>
+          
+          <div id="skills"><Skills /></div>
+          <div id="project"><Projectsbuilt /></div>
+        </div>
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
-  )
-}
+    
+  );
+};

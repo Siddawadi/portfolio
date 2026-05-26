@@ -11,19 +11,19 @@ const navItems = [
 
 export const Header = () => {
   return (
-    <header className="w-full sticky top-0 z-50">
+    <header className="w-full h-20 fixed top-0 z-50">  
       <Navcontents />
     </header>
   )
 }
-
 const Navcontents = () => {
   return (
-    <div className="flex items-center justify-between px-10 py-4 bg-gray-900 text-white shadow-md">
-      <div className="text-2xl font-bold tracking-wide text-blue-400">
-        Siddharth
+    <div className="flex  items-center justify-between px-10 py-4 bg-white text-xs 
+    font-light  text-black shadow-md">
+      <div className="text-lg fixed font-light tracking-wide ml-20 h-[7vh]  flex items-center text-black">
+        Siddhartha
       </div>
-      <div className="flex gap-8 text-lg">
+      <div className="flex w-full  justify-end mr-20 gap-6 text-lg">
         {navItems.map((item, index) => (
           <NavItem key={index} label={item.label} id={item.id} />
         ))}
@@ -33,8 +33,8 @@ const Navcontents = () => {
 }
 
 const NavItem = ({ id, label }) => (
-  <a href={`#${id}`} className="relative text-blue-400 group cursor-pointer no-underline">
+  <a href={`#${id}`} className="relative text-black  text-shadow-sm font-extralight text-sm group cursor-pointer no-underline">
     {label}
-    <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-400 transition-all duration-300 group-hover:w-full" />
+    <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full" />
   </a>
 )

@@ -6,15 +6,16 @@ const projects = [
     title: 'Student Management System',
     description:
       'A full-stack web application to manage student records, attendance, and performance. Built with the MERN stack.',
-    tags: ['HTML', 'CSS', 'JS', 'PHP'],
-    github: '#',
-    live: '#',
+    tags: ['MongoDB', 'Express', 'React', 'Node.js'],
+    
+    
+    
   },
   {
     title: 'Rental Room Finder',
     description:
       'A platform where landlords can list rooms and tenants can search and filter rental properties by location and price.',
-    tags: ['MongoDB', 'Express', 'React', 'Node.js'],
+    tags: ['HTML', 'CSS', 'JS', 'PHP'],
     github: '#',
     live: '#',
   },
@@ -28,12 +29,12 @@ export const Projectsbuilt = () => {
         What I've Built
       </p>
 
-      <h2 className="text-4xl font-bold italic mb-12 text-stone-900">
+      <h2 className="text-4xl font-bold italic mb-12 text-white-900">
         Projects
       </h2>
 
       {/* Project Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 bg-[#12100e] items-center text-[#f5f0e8]  gap-6 max-w-4xl">
         {projects.map((project) => (
           <ProjectCard
             key={project.title}
@@ -57,10 +58,11 @@ export const ProjectCard = ({
   live,
 }) => {
   return (
-    <div className="bg-white rounded-2xl p-6 border border-amber-100 hover:border-amber-300 hover:shadow-md transition-all duration-200 flex flex-col gap-4">
+    <div className=" hover:shadow-2xl shadow-gray-50 text-[#f5f0e8] items-center  rounded-2xl p-6 border
+      hover:border-amber-300 hover:shadow-md transition-all duration-200 flex flex-col gap-4">
       
       {/* Title */}
-      <h3 className="text-lg font-bold text-stone-900">
+      <h3 className="text-lg font-bold text-white-900">
         {title}
       </h3>
 
@@ -82,7 +84,7 @@ export const ProjectCard = ({
       </div>
 
       {/* Links */}
-      <div className="flex gap-4 mt-auto pt-2">
+      {/* <div className="flex gap-4 mt-auto pt-2">
         
         <a
           href={github}
@@ -104,7 +106,7 @@ export const ProjectCard = ({
           Live Demo
         </a>
 
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -20,7 +20,7 @@ const skills = [
   {
     category: 'Database',
     icon: <FaDatabase />,
-    items: ['MongoDB', 'Mongoose']
+    items: ['MongoDB', 'Mongo Atlas']
   },
   {
     category: 'Tools',
@@ -37,8 +37,8 @@ const skills = [
 export const Skills = () => {
   return (
     <section className="px-6 py-20 flex flex-col items-center ">
-      <p className="text-sm font-medium mb-2 text-amber-500 uppercase tracking-widest">What I Work With</p>
-      <h2 className="text-4xl font-bold italic mb-12 text-stone-900">Technical Skills</h2>
+      <p className="text-sm font-medium mb-2 text-black uppercase tracking-widest">What I Work With</p>
+      <h2 className="text-4xl font-bold italic mb-12 text-black">Technical Skills</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl">
         {skills.map((group) => (
@@ -56,22 +56,23 @@ export const Skills = () => {
 
 export const Items = ({ category, items, icon }) => {
   return (
-    <div className="bg-white rounded-2xl p-6 border border-amber-100 hover:border-amber-300 hover:shadow-md transition-all duration-200">
+    <div className=" text-white rounded-2xl p-6 border hover:shadow-md shadow-gray-50 opacity-70
+     border-amber-100 hover:border-black transition-all duration-200">
 
-      <div className="flex items-center gap-3 mb-4">
-        <span className="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-lg">
+      <div className="flex items-center gap-3 mb-4">c
+        <span className="w-9 h-9 rounded-xl bg-black text-amber-700 flex items-center justify-center text-lg">
           {icon}
         </span>
-        <p className="font-semibold text-stone-800">{category}</p>
+        <p className="font-semibold text-black">{category}</p>
       </div>
 
-      <div className="w-full h-px bg-amber-100 mb-4" />
+      <div className="w-full h-px bg-black mb-4" />
 
       <div className="flex flex-wrap gap-2">
         {items.map((skill) => (
           <span
             key={skill}
-            className="text-xs px-3 py-1 rounded-full font-medium bg-amber-50 text-amber-900 border border-amber-200"
+            className="text-xs px-3 py-1 rounded-full font-medium bg-black text-white border border-amber-200"
           >
             {skill}
           </span>
