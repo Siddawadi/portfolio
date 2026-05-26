@@ -3,7 +3,7 @@ import React from "react"
 const navItems = [
   { label: "Home",      id: "home" },
   { label: "About",     id: "about" },
-  { label: "Education", id: "education" },
+ 
   { label: "Skills",    id: "skills" },
   { label: "Projects",  id: "project" },
   { label: "Contact",   id: "contact" },
