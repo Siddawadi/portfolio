@@ -1,112 +1,86 @@
-import React from 'react'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { Link } from "react-router"
 
 const projects = [
-  {
-    title: 'Student Management System',
-    description:
-      'A full-stack web application to manage student records, attendance, and performance. Built with the MERN stack.',
-    tags: ['MongoDB', 'Express', 'React', 'Node.js'],
-    
-    
-    
-  },
-  {
-    title: 'Rental Room Finder',
-    description:
-      'A platform where landlords can list rooms and tenants can search and filter rental properties by location and price.',
-    tags: ['HTML', 'CSS', 'JS', 'PHP'],
-    github: '#',
-    live: '#',
-  },
-]
 
+  {
+    id: '02',
+    title: 'Rental Room Finder',
+    focus: 'Full Stack Web App',
+    description:
+      'A simple platform where tenants can search and filter properties by location and price.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+    image: 'rental room finder.png',
+    link:'https://rental-room-finder-production.up.railway.app/home.php'
+  },
+  {
+    id: '01',
+    title: 'Student Management System',
+    focus: 'Full Stack Web App',
+    description:
+      'A web app to manage students, attendance, and fees. Built with the MERN stack, it includes role-based login, image uploads, and a dashboard with key stats.',
+    tags: ['MongoDB', 'Express.js', 'React', 'Node.js'],
+    image: 'student management system.png',
+    link:"https://student-management-system-front-end-6ahk.onrender.com"
+  },
+  
+]
 export const Projectsbuilt = () => {
   return (
-    <section className="px-6 py-20 items-center flex flex-col">
-      {/* Section Heading */}
-      <p className="text-sm font-medium mb-2 text-amber-500 uppercase tracking-widest">
-        What I've Built
-      </p>
+    <section id="works" className="py-40 px-8 max-w-7xl mx-auto border-t border-black">
+      <div className="mb-20">
+        <span className="font-mono text-[11px] uppercase tracking-widest text-neutral-400  mb-3">
+        </span>
+        <h2 className="font-display font-bold text-3xl tracking-tight uppercase text-[#0a0a0c]">
+          Projects
+        </h2>
+      </div>
 
-      <h2 className="text-4xl font-bold italic mb-12 text-white-900">
-        Projects
-      </h2>
-
-      {/* Project Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 bg-[#12100e] items-center text-[#f5f0e8]  gap-6 max-w-4xl">
+      <div className="space-y-32">
         {projects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            title={project.title}
-            description={project.description}
-            tags={project.tags}
-            github={project.github}
-            live={project.live}
-          />
+          <ProjectCard key={project.id} {...project} />
         ))}
       </div>
     </section>
   )
 }
-
-export const ProjectCard = ({
-  title,
-  description,
-  tags,
-  github,
-  live,
-}) => {
+export const ProjectCard = ({ id, title, focus, description, tags,link, image }) => {
   return (
-    <div className=" hover:shadow-2xl shadow-gray-50 text-[#f5f0e8] items-center  rounded-2xl p-6 border
-      hover:border-amber-300 hover:shadow-md transition-all duration-200 flex flex-col gap-4">
-      
-      {/* Title */}
-      <h3 className="text-lg font-bold text-white-900">
-        {title}
-      </h3>
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div className="lg:col-span-1 font-mono text-sm text-neutral-300">[{id}]</div>
 
-      {/* Description */}
-      <p className="text-sm text-stone-500 leading-relaxed">
-        {description}
-      </p>
-
-      {/* Tags */}
-      <div className="flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <span
-            key={tag}
-            className="text-xs px-3 py-1 rounded-full font-medium bg-amber-50 text-amber-900 border border-amber-200"
-          >
-            {tag}
-          </span>
-        ))}
+      <div className="lg:col-span-5 space-y-4">
+        <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-400 block">
+          {focus}
+        </span>
+        <h3 className="font-display font-bold text-3xl text-black tracking-tight">{title}</h3>
+        <p style={{ fontFamily: '"Plus Jakarta Sans"' }} className="text-justify duration-150 font-extralight text-black">
+          {description}
+        </p>
       </div>
 
-      {/* Links */}
-      {/* <div className="flex gap-4 mt-auto pt-2">
-        
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm text-stone-500 hover:text-stone-900 transition-colors duration-200"
-        >
-          <FaGithub size={16} />
-          GitHub
-        </a>
+      <div className="lg:col-span-6 hover:scale-105 duration-500  transition-all space-y-8 lg:pl-12">
+        <Link
+        target="_blank"
+        to={link} className="w-full h-56  hover:scale-105
+         border">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+        </Link>
 
-        <a
-          href={live}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm text-amber-500 hover:text-amber-700 transition-colors duration-200"
-        >
-          <FaExternalLinkAlt size={14} />
-          Live Demo
-        </a>
-
-      </div> */}
+        <div className="flex flex-wrap gap-1.5 items-center justify-center">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-[10px] font-mono px-2.5 py-1 bg-neutral-50 border border-neutral-200/60 text-neutral-500"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 import { FaCode, FaReact, FaServer, FaDatabase, FaTools, FaRocket } from 'react-icons/fa'
 
@@ -38,7 +39,7 @@ export const Skills = () => {
   return (
     <section className="px-6 py-20 flex flex-col items-center ">
       <p className="text-sm font-medium mb-2 text-black uppercase tracking-widest">What I Work With</p>
-      <h2 className="text-4xl font-bold italic mb-12 text-black">Technical Skills</h2>
+      <h2 className="text-4xl font-bold  mb-12 text-black">Technical Skills</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl">
         {skills.map((group) => (
@@ -56,11 +57,17 @@ export const Skills = () => {
 
 export const Items = ({ category, items, icon }) => {
   return (
-    <div className=" text-white rounded-2xl p-6 border hover:shadow-md shadow-gray-50 opacity-70
-     border-amber-100 hover:border-black transition-all duration-200">
-
-      <div className="flex items-center gap-3 mb-4">c
-        <span className="w-9 h-9 rounded-xl bg-black text-amber-700 flex items-center justify-center text-lg">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.05 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.4 }}
+      className="text-white rounded-2xl p-6 border hover:shadow-md shadow-gray-50
+       border-amber-100 hover:border-black  transition-all duration-100"
+    >
+      <div className=" items-center grid-cols-3 gap-3 mb-4">
+        <span className="w-9 h-9  bg-black text-amber-700 flex items-center justify-center text-lg">
           {icon}
         </span>
         <p className="font-semibold text-black">{category}</p>
@@ -68,17 +75,18 @@ export const Items = ({ category, items, icon }) => {
 
       <div className="w-full h-px bg-black mb-4" />
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 ">
         {items.map((skill) => (
           <span
+            style={{ fontFamily: '"Plus Jakarta Sans"' }}
             key={skill}
-            className="text-xs px-3 py-1 rounded-full font-medium bg-black text-white border border-amber-200"
+            className="text-xs px-3 py-1 h-7  font-medium bg- text-black border hover:bg-black hover:text-white
+             border-amber-200"
           >
             {skill}
           </span>
         ))}
       </div>
-
-    </div>
+    </motion.div>
   )
 }

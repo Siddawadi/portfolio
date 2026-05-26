@@ -9,10 +9,11 @@ import { SplineScene } from '../components/common/SplineScene'
 import { Education } from '../pages/education'
 import { Projectsbuilt } from '../pages/built'
 import { Tryweb } from '../pages/try'
+import { Contact } from '../pages/contact'
 
 export const Layout = () => {
   return (
-    <div className="relative flex flex-col  w-full min-h-screen text-sm font-light
+    <div className="relative flex flex-col  w-full min-h-screen  font-light
      text-sm mb-2 bg-whtie
      text-[#f5f0e8]  tracking-widest overflow-hidden">
 
@@ -35,6 +36,7 @@ export const Layout = () => {
           
           <div id="skills"><Skills /></div>
           <div id="project"><Projectsbuilt /></div>
+          <div id='contact'><Contact/> </div>
         </div>
 
         <Footer />

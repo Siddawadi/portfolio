@@ -22,7 +22,7 @@ export const Aboutme = () => {
      '>
             <p 
             style={{fontFamily:'"Space Grotesk"'}}
-            className='items-start  flex  justify-center text-justify'>
+            className='items-start text-2xl flex  justify-center text-justify'>
 
              I'm Siddhartha Dawadi, a web development student from Nepal passionate about building modern full-stack applications with 
              the MERN stack. I enjoy transforming ideas into functional, user-friendly products and
@@ -30,19 +30,19 @@ export const Aboutme = () => {
             </p>
             <p
              style={{fontFamily:'"Plus Jakarta Sans"'}}
-            className='items-start flex font-light  text-gray-500 justify-center text-justify  mb-5'>
+            className='items-start flex font-light  text-gray-400 justify-center text-justify  mb-5'>
               My interests are strongly centered around backend development, API design, and scalable web architecture. Alongside developing applications with React, Node.js, Express, and MongoDB, I spend time learning emerging technologies, strengthening 
               my problem-solving abilities, and gaining hands-on experience through continuous project building.
             </p>
            
           </div>
-          <div className='grid grid-cols-3 border-t-1  w-[50vw] '>
+          <div className='grid grid-cols-3 border-t  w-[50vw] '>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className='flex rounded-2xl w-60 mt-5 p-2  h-25 mb-5 flex-col   hover:shadow-md shadow-gray-50'
+            className='flex rounded-2xl w-60 mt-5 p-2  h-25 mb-5 flex-col text-xs  hover:shadow-md shadow-gray-50'
           >
             <p
               
@@ -51,13 +51,15 @@ export const Aboutme = () => {
               </p>
             <p
             className=''
+            style={{fontFamily:'"Plus Jakarta Sans"'}} className=' text-justify 
+             duration-150 font-normal py-2'
             >
               
                 Full-Stack Web Development
             </p>
-            <p 
-            style={{fontFamily:'"Plus Jakarta Sans"'}}
-            className='text-justify  duration-150  hover:border-green-400'>
+           <p
+            style={{fontFamily:'"Plus Jakarta Sans"'}} className=' text-justify 
+             duration-150 font-extralight'>
                MongoDB, Express, React, and Node.js . Building complete applications from database to UI
             </p>
           </motion.div>
@@ -70,13 +72,14 @@ export const Aboutme = () => {
             whileInView={{ opacity: 1, y: 0 }}// while in view means the div is visible when opacity 1 and is in its normal position
             viewport={{ once :false }}
             transition={{ duration: 1, delay: 0.1 }}
-            className='flex hover:shadow-md mt-5 flex-col shadow-gray-50 rounded-2xl w-60 mb-5 p-2  h-25 '
+            className='flex hover:shadow-md text-xs  mt-5 flex-col shadow-gray-50 rounded-2xl w-60 mb-5 p-2  h-25 '
           >
              <p  style={{fontFamily:'"Plus Jakarta Sans"'}}>
                 [B]
               </p >
             <p
-            className='flex flex-col font-bold '
+          style={{fontFamily:'"Plus Jakarta Sans"'}} className=' text-justify 
+             duration-150 font-normal py-2'
             >
              
               Frontend Development
@@ -84,9 +87,9 @@ export const Aboutme = () => {
 
             </p>
             
-            <p 
-            style={{fontFamily:'"Plus Jakarta Sans"'}}
-            className=' text-justify  duration-150 text-sm font-extralight'>
+            <p
+            style={{fontFamily:'"Plus Jakarta Sans"'}} className=' text-justify 
+             duration-150 font-extralight'>
               React-based interfaces, component architecture, and responsive design with Tailwind CSS
             </p>
           </motion.div>
@@ -96,13 +99,14 @@ export const Aboutme = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className='flex flex-col mt-5 hover:shadow-md shadow-gray-50 items-center jus rounded-2xl w-60 h-25 p-2 '
+            className='flex flex-col mt-5 text-xs  hover:shadow-md shadow-gray-50 items-center jus rounded-2xl w-60 h-25 p-2 '
           >
             <p>
                 [C]
               </p>
             <p
-            
+            style={{fontFamily:'"Plus Jakarta Sans"'}} className=' text-justify 
+             duration-150 font-normal py-2'
             >
               
 

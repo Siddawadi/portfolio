@@ -35,6 +35,6 @@ const Navcontents = () => {
 const NavItem = ({ id, label }) => (
   <a href={`#${id}`} className="relative text-black  text-shadow-sm font-extralight text-sm group cursor-pointer no-underline">
     {label}
-    <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full" />
+    <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-black transition-all duration-300 group-hover:w-full" />
   </a>
 )
