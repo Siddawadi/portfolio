@@ -5,7 +5,7 @@ import { Footer } from '../components/common/footer'
 import { Introduction } from '../pages/introduction'
 import { Aboutme } from '../pages/aboutus'
 import { Projects } from '../pages/projects'
-import { SplineScene } from '../components/common/SplineScene'
+
 import { Education } from '../pages/education'
 import { Projectsbuilt } from '../pages/built'
 import { Tryweb } from '../pages/try'
